@@ -1,7 +1,7 @@
 // create a map object
 var myMap = L.map("map", {
-    center: [38.850033, -97.6500523],
-    zoom: 4
+    center: [40.446, 79.982],
+    zoom: 2
 });
 
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
@@ -22,7 +22,7 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     for (var i = 0; i < data.length; i++) {
         // var location = [];
         // location.push([data[i].Lat], data[i].Long);
-        var location = [data[i].Lat, data[i].Long]
+        var location = [data[i].Lat, data[i].Long, data[i].median]
 
         if (location) {
             heatArray.push(location)
