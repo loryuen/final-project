@@ -1,13 +1,20 @@
+//
+var currentDay = new Date()
+
 // create a map object
 var myMap = L.map("map", {
     center: [40.446, 79.982],
-    zoom: 2
+    zoom: 2,
+    fullscreenControl: true,
+    timeDimension: true,
+    timeDimensionControl: true
 });
-
+mapbox://styles/lorelley/ck9m5rf8a18mo1jqtznx8hwhh
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
-    id: "mapbox.streets-basic",
+    // id: "mapbox.streets-basic",
+    id: "mapbox.dark",
     accessToken: API_KEY
   }).addTo(myMap);
 
