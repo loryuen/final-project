@@ -53,4 +53,6 @@ var heat = L.heatLayer(heatArray, {
     }).addTo(after);
 });
 
+L.marker([38.895, -77.060]).addTo(before);
+
 $('#map').beforeAfter(before, after);
