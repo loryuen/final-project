@@ -3,8 +3,12 @@ body {
   margin: 0px;
 }
 
-#map,
-body,
+#body,
 html {
   height: 100%;
 }
+
+/* #map {
+  width: 840px;
+  height: 400px;
+} */
