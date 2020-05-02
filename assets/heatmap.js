@@ -15,30 +15,23 @@ L.tileLayer('http://{s}.tiles.mapbox.com/v3/spatial.map-qgihrqg5/{z}/{x}/{y}.png
 L.tileLayer('http://{s}.tiles.mapbox.com/v3/spatial.map-qgihrqg5/{z}/{x}/{y}.png').addTo(after); 
 
 // Configure a parseTime function which will return a new Date object from a string
-var timeParse = d3.timeParse("%m/%d/%Y");
+var timeParse = d3.timeParse("%m/%d/%y");
+// Format time so it is easy to filter
 var timeFormat = d3.timeFormat("%Y-%m-%d")
-// var timeParse = d3.timeFormat("%x");
 
-
-dataCsv = "data/2020_combined.csv"
+dataCsv = "data/2020_combined2.csv"
 
 d3.csv(dataCsv, function(data) {
-    // console.log(data);
-    // console.log(data[0].Lat, data[0].Long)
+    console.log(data);
 
     // parse through time
     data.forEach(function(d) {
-        
         d.Date = timeParse(d.Date);
         d.Date = timeFormat(d.Date)
-        
-        // console.log(d.Date)
-    
     });
-    console.log(data);
 
     // filter for december dates
-    dec = data.filter(function(d){ return d.Date > "2019-12-29" && d.Date < "2020-01-07"})
+    dec = data.filter(function(d){ return d.Date > "2019-09-30" && d.Date < "2019-10-15"})
     console.log(dec.length)  
 
     // filter for april dates
@@ -48,7 +41,6 @@ d3.csv(dataCsv, function(data) {
     // get location data for dec dates and store in heatArray
     var heatArrayDec = [];
     for (var i = 0; i < dec.length; i++) {
-    
         var location = [dec[i].Lat, dec[i].Long, dec[i].median]
 
         if (location) {
@@ -57,11 +49,9 @@ d3.csv(dataCsv, function(data) {
     };
     console.log(heatArrayDec);
 
-
     // get location data for april dates and store in heatArray
     var heatArrayApril = [];
     for (var i = 0; i < april.length; i++) {
-    
         var location = [april[i].Lat, april[i].Long, april[i].median]
 
         if (location) {
