@@ -1,5 +1,5 @@
 var center = [38.895, -77.020];
-var zoom = 3;
+var zoom = 2;
 var before = L.map('before', {
         attributionControl: false,
         inertia: false,
@@ -14,6 +14,78 @@ var after = L.map('after', {
 L.tileLayer('http://{s}.tiles.mapbox.com/v3/spatial.map-qgihrqg5/{z}/{x}/{y}.png').addTo(before);  
 L.tileLayer('http://{s}.tiles.mapbox.com/v3/spatial.map-qgihrqg5/{z}/{x}/{y}.png').addTo(after); 
 
+// Configure a parseTime function which will return a new Date object from a string
+var timeParse = d3.timeParse("%m/%d/%Y");
+var timeFormat = d3.timeFormat("%Y-%m-%d")
+// var timeParse = d3.timeFormat("%x");
+
+
+dataCsv = "data/2020_combined.csv"
+
+d3.csv(dataCsv, function(data) {
+    // console.log(data);
+    // console.log(data[0].Lat, data[0].Long)
+
+    // parse through time
+    data.forEach(function(d) {
+        
+        d.Date = timeParse(d.Date);
+        d.Date = timeFormat(d.Date)
+        
+        // console.log(d.Date)
+    
+    });
+    console.log(data);
+
+    // filter for december dates
+    dec = data.filter(function(d){ return d.Date > "2019-12-29" && d.Date < "2020-01-07"})
+    console.log(dec.length)  
+
+    // filter for april dates
+    april = data.filter(function(d){ return d.Date > "2020-04-23"})
+    console.log(april.length)    
+    
+    // get location data for dec dates and store in heatArray
+    var heatArrayDec = [];
+    for (var i = 0; i < dec.length; i++) {
+    
+        var location = [dec[i].Lat, dec[i].Long, dec[i].median]
+
+        if (location) {
+            heatArrayDec.push(location)
+        };
+    };
+    console.log(heatArrayDec);
+
+
+    // get location data for april dates and store in heatArray
+    var heatArrayApril = [];
+    for (var i = 0; i < april.length; i++) {
+    
+        var location = [april[i].Lat, april[i].Long, april[i].median]
+
+        if (location) {
+            heatArrayApril.push(location)
+        };
+    };
+    console.log(heatArrayApril);
+
+    // heat layer for dec
+    var heat = L.heatLayer(heatArrayDec, {
+        radius: 20,
+        blur: 35
+        }).addTo(before);
+    
+    // heat layer for April
+    var heat = L.heatLayer(heatArrayApril, {
+        radius: 20,
+        blur: 35
+        }).addTo(after);
+});
+
+L.marker([38.895, -77.060]).addTo(before);
+
+$('#map').beforeAfter(before, after);
 
 
 // create a map object
@@ -29,30 +101,3 @@ L.tileLayer('http://{s}.tiles.mapbox.com/v3/spatial.map-qgihrqg5/{z}/{x}/{y}.png
 //     id: "mapbox.dark",
 //     accessToken: API_KEY
 //   }).addTo(myMap);
-
-dataCsv = "data/2020_combined.csv"
-
-d3.csv(dataCsv, function(data) {
-console.log(data);
-console.log(data[0].Lat, data[0].Long)
-
-var heatArray = [];
-
-for (var i = 0; i < data.length; i++) {
-    var location = [data[i].Lat, data[i].Long, data[i].median]
-
-    if (location) {
-        heatArray.push(location)
-    };
-}
-console.log(heatArray);
-
-var heat = L.heatLayer(heatArray, {
-    radius: 20,
-    blur: 35
-    }).addTo(after);
-});
-
-L.marker([38.895, -77.060]).addTo(before);
-
-$('#map').beforeAfter(before, after);
