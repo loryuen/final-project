@@ -8,9 +8,11 @@ import plotly.graph_objs as go
 
 data = pd.read_csv('https://datamfburchaws.s3.us-east-2.amazonaws.com/airdata2.csv')
 
-application=dash.Dash()
+app=dash.Dash()
 
-application.layout = html.Div([     
+application = app.server
+
+app.layout = html.Div([     
     dcc.Graph(
         id='MedianPM25',
         figure={
