@@ -1,0 +1,533 @@
+CityID,City,Country
+0,Abidjan,CI
+429,Stuttgart,DE
+227,Köln,DE
+202,Kassel,DE
+201,Karlsruhe,DE
+35,Berlin,DE
+117,Düsseldorf,DE
+129,Freiburg,DE
+501,Wiesbaden,DE
+101,Darmstadt,DE
+350,Potsdam,DE
+156,Hamburg,DE
+2,Accra,GH
+186,Jakarta,ID
+179,Isfahan,IR
+16,Arāk,IR
+200,Karaj,IR
+364,Qom,IR
+325,Orūmīyeh,IR
+526,Īlām,IR
+209,Kerman,IR
+212,Khorramshahr,IR
+440,Tabriz,IR
+28,Bandar Abbas,IR
+400,Sanandaj,IR
+210,Kermanshah,IR
+211,Khorramabad,IR
+417,Shiraz,IR
+519,Zanjān,IR
+260,Mashhad,IR
+455,Tehran,IR
+27,Bamako,ML
+427,Stockholm,SE
+150,Göteborg,SE
+255,Malmö,SE
+483,Uppsala,SE
+239,Linz,AT
+493,Vienna,AT
+125,Eskişehir,TR
+527,İzmit,TR
+59,Bursa,TR
+13,Ankara,TR
+206,Kayseri,TR
+228,Kütahya,TR
+26,Balıkesir,TR
+3,Adapazarı,TR
+474,Trabzon,TR
+390,Samsun,TR
+218,Konya,TR
+421,Sivas,TR
+181,Istanbul,TR
+124,Erzurum,TR
+84,Chon Buri,TH
+80,Chiang Mai,TH
+290,Nakhon Pathom,TH
+371,Rayong,TH
+230,Lampang,TH
+29,Bangkok,TH
+391,Samut Prakan,TH
+232,Las Palmas de Gran Canaria,ES
+387,Salamanca,ES
+110,Donostia / San Sebastián,ES
+136,Gasteiz / Vitoria,ES
+487,Valladolid,ES
+334,Palma,ES
+38,Bilbao,ES
+68,Castelló de la Plana,ES
+254,Madrid,ES
+486,Valencia,ES
+58,Burgos,ES
+401,Santa Cruz de Tenerife,ES
+332,Oviedo,ES
+377,Rijeka,HR
+41,Bishkek,KG
+116,Dushanbe,TJ
+367,Quito,EC
+420,Singapore,SG
+94,Copenhagen,DK
+490,Vantaa,FI
+479,Turku,FI
+331,Oulu,FI
+164,Helsinki,FI
+450,Tampere,FI
+149,Győr,HU
+437,Szeged,HU
+359,Pécs,HU
+207,Kecskemét,HU
+271,Miskolc,HU
+56,Budapest,HU
+514,Yangon,MM
+481,Ulan Bator,MN
+384,Saint-Denis,RE
+396,San José,CR
+169,Hong Kong,HK
+240,Lisbon,PT
+132,Funchal,PT
+166,Ho Chi Minh City,VN
+173,Huế,VN
+159,Hanoi,VN
+154,Haiphong,VN
+176,Hạ Long,VN
+9,Algiers,DZ
+43,Bogotá,CO
+262,Medellín,CO
+92,Conakry,GN
+374,Reykjavík,IS
+119,Ecatepec de Morelos,MX
+144,Guadalajara,MX
+96,Cuernavaca,MX
+266,Mexico City,MX
+279,Morelia,MX
+284,Mérida,MX
+398,San Luis Potosí,MX
+276,Monterrey,MX
+333,Pachuca de Soto,MX
+458,Tepic,MX
+467,Toluca,MX
+6,Aguascalientes,MX
+318,Oaxaca,MX
+22,Auckland,NZ
+86,Christchurch,NZ
+500,Wellington,NZ
+444,Taitung City,TW
+441,Taichung,TW
+451,Taoyuan City,TW
+443,Taipei,TW
+172,Hsinchu,TW
+208,Keelung,TW
+442,Tainan,TW
+112,Douliu,TW
+198,Kaohsiung,TW
+438,São José dos Campos,BR
+496,Vitória,BR
+439,São Paulo,BR
+244,Liège,BE
+55,Brussels,BE
+74,Charleroi,BE
+138,Gent,BE
+291,Namur,BE
+14,Antwerpen,BE
+256,Manama,BH
+114,Dublin,IE
+453,Tashkent,UZ
+57,Buenos Aires,AR
+524,Zürich,CH
+472,Tours,FR
+259,Marseille,FR
+316,Nîmes,FR
+36,Besançon,FR
+296,Nantes,FR
+373,Rennes,FR
+471,Toulouse,FR
+293,Nancy,FR
+88,Clermont-Ferrand,FR
+335,Paris,FR
+324,Orléans,FR
+277,Montpellier,FR
+250,Lyon,FR
+107,Dijon,FR
+380,Rouen,FR
+142,Grenoble,FR
+470,Toulon,FR
+62,Caen,FR
+338,Perpignan,FR
+46,Bordeaux,FR
+305,Nice,FR
+385,Saint-Étienne,FR
+265,Metz,FR
+428,Strasbourg,FR
+476,Trondheim,NO
+327,Oslo,NO
+426,Stavanger,NO
+34,Bergen,NO
+157,Hamilton,CA
+64,Calgary,CA
+503,Winnipeg,CA
+155,Halifax,CA
+213,Kitchener,CA
+121,Edmonton,CA
+431,Surrey,CA
+272,Mississauga,CA
+368,Québec,CA
+489,Vancouver,CA
+492,Victoria,CA
+278,Montréal,CA
+469,Toronto,CA
+330,Ottawa,CA
+245,London,CA
+456,Tel Aviv,IL
+152,Haifa,IL
+189,Jerusalem,IL
+17,Ashdod,IL
+301,Netanya,IL
+19,Ashkelon,IL
+341,Petaẖ Tiqwa,IL
+252,Macau,MO
+397,San Juan,PR
+268,Middelburg,ZA
+355,Pretoria,ZA
+118,East London,ZA
+192,Johannesburg,ZA
+42,Bloemfontein,ZA
+66,Cape Town,ZA
+491,Vereeniging,ZA
+115,Durban,ZA
+214,Klerksdorp,ZA
+375,Richards Bay,ZA
+348,Port Elizabeth,ZA
+505,Worcester,ZA
+1,Abu Dhabi,AE
+113,Dubai,AE
+530,Ḩawallī,KW
+203,Kathmandu,NP
+347,Pokhara,NP
+39,Biratnagar,NP
+462,Thessaloníki,GR
+20,Athens,GR
+131,Fukuoka,JP
+197,Kanazawa,JP
+223,Kumamoto,JP
+7,Akita,JP
+216,Kochi,JP
+140,Gifu-shi,JP
+226,Kyoto,JP
+165,Hiroshima,JP
+419,Shizuoka,JP
+81,Chiba,JP
+403,Sapporo,JP
+517,Yokohama,JP
+466,Tokyo,JP
+386,Saitama,JP
+289,Naha,JP
+286,Nagasaki,JP
+473,Toyama,JP
+307,Niigata,JP
+298,Nara-shi,JP
+320,Okayama,JP
+407,Sendai,JP
+326,Osaka,JP
+273,Miyazaki,JP
+261,Matsuyama,JP
+497,Wakayama,JP
+446,Takamatsu,JP
+287,Nagoya,JP
+529,Ōita,JP
+215,Kobe,JP
+285,Nagano,JP
+485,Utsunomiya,JP
+194,Kagoshima,JP
+188,Jeonju,KR
+409,Seoul,KR
+60,Busan,KR
+406,Sejong,KR
+482,Ulsan,KR
+515,Yeosu,KR
+148,Gwangju,KR
+408,Seongnam-si,KR
+98,Daejeon,KR
+346,Pohang,KR
+72,Changwon,KR
+432,Suwon,KR
+79,Cheongju-si,KR
+87,Chuncheon,KR
+97,Daegu,KR
+187,Jeju City,KR
+177,Incheon,KR
+430,Suncheon,KR
+275,Mokpo,KR
+12,Andong,KR
+315,Nur-Sultan,KZ
+10,Almaty,KZ
+89,Colombo,LK
+484,Utrecht,NL
+308,Nijmegen,NL
+151,Haarlem,NL
+122,Eindhoven,NL
+379,Rotterdam,NL
+11,Amsterdam,NL
+111,Dordrecht,NL
+49,Breda,NL
+143,Groningen,NL
+251,Maastricht,NL
+461,The Hague,NL
+106,Dhaka,BD
+100,Dammam,SA
+399,San Salvador,SV
+30,Beijing,CN
+190,Jieyang,CN
+224,Kunming,CN
+158,Hangzhou,CN
+85,Chongqing,CN
+361,Qingdao,CN
+153,Haikou,CN
+525,Ürümqi,CN
+363,Qiqihar,CN
+147,Guiyang,CN
+414,Shenzhen,CN
+518,Yunfu,CN
+513,Xuchang,CN
+516,Yinchuan,CN
+413,Shenyang,CN
+237,Lhasa,CN
+410,Shanghai,CN
+70,Changchun,CN
+128,Foshan,CN
+295,Nanning,CN
+133,Fushun,CN
+162,Hefei,CN
+77,Chengdu,CN
+168,Hohhot,CN
+362,Qinhuangdao,CN
+415,Shijiazhuang,CN
+411,Shantou,CN
+522,Zhengzhou,CN
+294,Nanjing,CN
+510,Xining,CN
+512,Xi’an,CN
+523,Zhuzhou,CN
+507,Wuhan,CN
+465,Tianjin,CN
+73,Changzhou,CN
+292,Nanchang,CN
+418,Shiyan,CN
+511,Xinxiang,CN
+433,Suzhou,CN
+160,Harbin,CN
+231,Lanzhou,CN
+191,Jinan,CN
+71,Changsha,CN
+163,Hegang,CN
+15,Anyang,CN
+508,Wuxi,CN
+445,Taiyuan,CN
+145,Guangzhou,CN
+134,Fuzhou,CN
+309,Ningbo,CN
+509,Xiamen,CN
+109,Dongguan,CN
+454,Tbilisi,GE
+146,Guatemala City,GT
+464,Thrissur,IN
+302,New Delhi,IN
+174,Hyderabad,IN
+103,Delhi,IN
+69,Chandigarh,IN
+37,Bhopal,IN
+288,Nagpur,IN
+248,Lucknow,IN
+139,Ghāziābād,IN
+175,Hāpur,IN
+135,Gandhinagar,IN
+78,Chennai,IN
+299,Nashik,IN
+283,Mysore,IN
+495,Visakhapatnam,IN
+281,Mumbai,IN
+185,Jaipur,IN
+337,Patna,IN
+282,Muzaffarnagar,IN
+463,Thiruvananthapuram,IN
+33,Bengaluru,IN
+416,Shillong,IN
+217,Kolkata,IN
+528,Łódź,PL
+452,Tarnów,PL
+137,Gdańsk,PL
+204,Katowice,PL
+351,Poznań,PL
+436,Szczecin,PL
+498,Warsaw,PL
+61,Bydgoszcz,PL
+506,Wrocław,PL
+360,Płock,PL
+220,Kraków,PL
+313,Novi Sad,RS
+311,Niš,RS
+32,Belgrade,RS
+404,Sarajevo,BA
+521,Zenica,BA
+480,Tuzla,BA
+219,Košice,SK
+48,Bratislava,SK
+321,Oklahoma City,US
+369,Raleigh,US
+264,Memphis,US
+183,Jackson,US
+47,Boston,US
+376,Richmond,US
+349,Portland,US
+44,Boise,US
+23,Austin,US
+170,Honolulu,US
+130,Fresno,US
+270,Milwaukee,US
+90,Columbia,US
+161,Hartford,US
+499,Washington D.C.,US
+82,Chicago,US
+171,Houston,US
+178,Indianapolis,US
+21,Atlanta,US
+75,Charlotte,US
+381,Sacramento,US
+317,Oakland,US
+357,Providence,US
+425,Staten Island,US
+54,Brooklyn,US
+424,Springfield,US
+460,The Bronx,US
+395,San Jose,US
+246,Los Angeles,US
+105,Detroit,US
+241,Little Rock,US
+25,Baltimore,US
+343,Phoenix,US
+323,Omaha,US
+123,El Paso,US
+99,Dallas,US
+405,Seattle,US
+258,Manhattan,US
+267,Miami,US
+184,Jacksonville,US
+233,Las Vegas,US
+392,San Antonio,US
+342,Philadelphia,US
+393,San Diego,US
+91,Columbus,US
+382,Saint Paul,US
+104,Denver,US
+389,Salt Lake City,US
+8,Albuquerque,US
+394,San Francisco,US
+388,Salem,US
+253,Madison,US
+300,Nashville,US
+477,Tucson,US
+365,Queens,US
+448,Tallahassee,US
+127,Fort Worth,US
+76,Chelyabinsk,RU
+310,Nizhniy Novgorod,RU
+383,Saint Petersburg,RU
+221,Krasnoyarsk,RU
+468,Tomsk,RU
+314,Novosibirsk,RU
+280,Moscow,RU
+4,Addis Ababa,ET
+24,Baghdad,IQ
+45,Bologna,IT
+243,Livorno,IT
+475,Trieste,IT
+274,Modena,IT
+353,Prato,IT
+126,Florence,IT
+297,Naples,IT
+378,Rome,IT
+478,Turin,IT
+269,Milan,IT
+50,Brescia,IT
+336,Parma,IT
+494,Vientiane,LA
+205,Kaunas,LT
+196,Kampala,UG
+502,Willemstad,CW
+352,Prague,CZ
+329,Ostrava,CZ
+53,Brno,CZ
+344,Pilsen,CZ
+322,Olomouc,CZ
+422,Skopje,MK
+238,Lima,PE
+18,Ashgabat,TM
+356,Pristina,XK
+306,Nicosia,CY
+370,Rancagua,CL
+328,Osorno,CL
+247,Los Ángeles,CL
+83,Chillán,CL
+63,Calama,CL
+358,Puerto Montt,CL
+488,Valparaíso,CL
+366,Quilpué,CL
+402,Santiago,CL
+447,Talca,CL
+93,Concepción,CL
+457,Temuco,CL
+449,Tallinn,EE
+319,Odessa,UA
+459,Ternopil,UA
+225,Kyiv,UA
+195,Kamianske,UA
+108,Dnipro,UA
+520,Zaporizhia,UA
+249,Lviv,UA
+222,Kryvyi Rih,UA
+182,Ivano-Frankivsk,UA
+435,Sydney,AU
+303,Newcastle,AU
+234,Launceston,AU
+167,Hobart,AU
+102,Darwin,AU
+263,Melbourne,AU
+65,Canberra,AU
+5,Adelaide,AU
+51,Brisbane,AU
+339,Perth,AU
+504,Wollongong,AU
+120,Edinburgh,GB
+312,Norwich,GB
+242,Liverpool,GB
+31,Belfast,GB
+95,Coventry,GB
+235,Leeds,GB
+67,Cardiff,GB
+52,Bristol,GB
+245,London,GB
+40,Birmingham,GB
+412,Sheffield,GB
+304,Newport,GB
+236,Leicester,GB
+257,Manchester,GB
+372,Reading,GB
+345,Plymouth,GB
+141,Glasgow,GB
+354,Preston,GB
+434,Swansea,GB
+423,Southend-on-Sea,GB
+199,Karachi,PK
+340,Peshawar,PK
+180,Islamabad,PK
+229,Lahore,PK
+193,Kabul,AF
