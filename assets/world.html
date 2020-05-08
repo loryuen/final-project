@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- leaflet responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>World Data</title>
+
+  <!-- side by side -->
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+  <!-- jquery -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="jquery.ui.touch-punch.min.js"></script> 
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="jquery.beforeafter-map-0.11.js"></script>
+
+  <!-- map and d3 -->
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+<!--  -->
+
+  <!-- link to bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- links to Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+  <!-- iframe -->
+  <iframe src="https://www.w3schools.com"></iframe>
+
+  <!-- link to stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: lightcoral">
+        <a class="navbar-brand" href="index.html">COVID-19: Behavioral Impacts</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- navbar buttons -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto"> 
+            <!-- dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Behavioral Impacts</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="crime.html">Crime</a>
+                <a class="dropdown-item" href="unemployment.html">Unemployment</a>
+                <a class="dropdown-item" href="http://localhost:5000#">Internet Usage</a>
+                <a class="dropdown-item" href="stocks.html">Stocks</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+  <!-- container -->
+  <div class="container">
+    <!-- top row spacer -->
+    <div class="row spacer">
+            <div class="col-12 top-spacer"></div>
+    </div>
+
+    <!-- main content - first row -->
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <h1>World Data</h1>
+        <p align="justify">
+                This website displays updated caseload information on the corona virus in the USA and analyzes the impact of the corona virus on various aspects of life and society. Four key impacts are analyzed: crime, unemployment, internet usage and stocks. State level data is pulled from the <a href="https://covidtracking.com/api/" target="_blank">COVID Tracking Project's API</a> updated daily (main data source: state public health authorities). County level data is pulled from the <a href="https://github.com/ExpDev07/coronavirus-tracker-api" target="_blank">Coronavirus Tracker API</a> which updated throughout the day (main data source: <a href="https://www.csbs.org/information-covid-19-coronavirus" target="_blank">Conference of State Bank Supervisors (CSBS)</a>).
+            </p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h3>Air Quality: Before and After COVID-19 Pandemic</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" id="plot-cases">
+            <p class="sub-text">measures put in place to combat COVID-19 have led to drops in air pollution levels.</p>
+        <!-- append heat map here -->
+        <section id="map" style="height:500px; width: 840px">
+            <img class="thumbnail" src="heatmap.png" alt="heatmap thumbnail">
+        </section>
+        </div>
+    </div>
+
+    <!-- spacer between sections -->
+    <!-- <div class="row spacer">
+            <div class="col-12 top-spacer"></div>
+    </div> -->
+
+    <!-- Air Quality Graph -->
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h3>Air Quality Over Time: World Cities</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" id="plot-cases">
+            <p class="sub-text">FILLER TEXT measures put in place to combat COVID-19 have led to drops in air pollution levels.</p>
+        <!-- append heat map here -->
+        <section id="map" style="height:500px; width: 840px">
+            <!-- <img class="thumbnail" src="worldgraph.png" alt="world graph pm2.5 thumbnail"> -->
+            <iframe src="https://wwairchart.herokuapp.com/" width="900px" height="450px"></iframe>
+        </section>
+        
+
+        </div>
+    </div>
+
+  <!-- Footer-->
+    <div class='footer'>
+        <footer>
+            <p>© Copyright 2020</p> 
+        </footer>
+    </div>
+
+    <!-- bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- js scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+  <!-- API key -->
+  <script type="text/javascript" src="config.js"></script>
+  <!-- JS -->
+  <script type="text/javascript" src="heatmap.js"></script>
+  <!-- Leaflet heatmap plugin-->
+  <script type="text/javascript" src="leaflet-heat.js"></script>
+
+</body>
+
+</html>

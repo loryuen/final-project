@@ -1,3 +1,4 @@
+// create BEFORE map object
 var center = [38.895, -77.020];
 var zoom = 2;
 var before = L.map('before', {
@@ -5,14 +6,41 @@ var before = L.map('before', {
         inertia: false,
         minZoom: 1
     }).setView(center, zoom);
-    
+
+// create AFTER map object
 var after = L.map('after', {
         inertia: false,
         minZoom: 1
     }).setView(center, zoom);
 
-L.tileLayer('http://{s}.tiles.mapbox.com/v3/spatial.map-qgihrqg5/{z}/{x}/{y}.png').addTo(before);  
-L.tileLayer('http://{s}.tiles.mapbox.com/v3/spatial.map-qgihrqg5/{z}/{x}/{y}.png').addTo(after); 
+// L.tileLayer('http://{s}.tiles.mapbox.com/v3/spatial.map-qgihrqg5/{z}/{x}/{y}.png').addTo(after);  
+// L.tileLayer('http://{s}.tiles.mapbox.com/v3/spatial.map-qgihrqg5/{z}/{x}/{y}.png').addTo(before); 
+
+L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+        attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+        maxZoom: 18,
+        // id: "mapbox.streets-basic",
+        id: "mapbox.dark",
+        accessToken: API_KEY
+      }).addTo(after);
+
+L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+        attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+        maxZoom: 18,
+        // id: "mapbox.streets-basic",
+        id: "mapbox.dark",
+        accessToken: API_KEY
+      }).addTo(before);
+
+
+// var heatMap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+//     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+//     maxZoom: 18,
+//     // id: "mapbox.streets-basic",
+//     id: "mapbox.dark",
+//     accessToken: API_KEY
+//   }).addTo(myMap);
+
 
 // Configure a parseTime function which will return a new Date object from a string
 var timeParse = d3.timeParse("%m/%d/%y");
@@ -30,12 +58,14 @@ d3.csv(dataCsv, function(data) {
         d.Date = timeFormat(d.Date)
     });
 
-    // filter for december dates
-    dec = data.filter(function(d){ return d.Date > "2019-09-30" && d.Date < "2019-10-15"})
+    // filter for jan dates
+    dec = data.filter(function(d){ return d.Date > "2020-01-01" && d.Date < "2020-01-26"})
+    // dec = data.filter(function(d){ return d.Date == "2019-10-03"})
     console.log(dec.length)  
 
     // filter for april dates
-    april = data.filter(function(d){ return d.Date > "2020-04-23"})
+    april = data.filter(function(d){ return d.Date > "2020-04-05"})
+    // april = data.filter(function(d){ return d.Date == "2020-05-01"})
     console.log(april.length)    
     
     // get location data for dec dates and store in heatArray
@@ -62,32 +92,19 @@ d3.csv(dataCsv, function(data) {
 
     // heat layer for dec
     var heat = L.heatLayer(heatArrayDec, {
-        radius: 20,
-        blur: 35
+        // radius: 20,
+        radius: 18,
+        blur: 25
         }).addTo(before);
     
     // heat layer for April
     var heat = L.heatLayer(heatArrayApril, {
-        radius: 20,
-        blur: 35
+        // radius: 20,
+        radius: 18,
+        blur: 25
         }).addTo(after);
 });
 
 L.marker([38.895, -77.060]).addTo(before);
 
 $('#map').beforeAfter(before, after);
-
-
-// create a map object
-// var myMap = L.map("map", {
-//     center: [40.446, 79.982],
-//     zoom: 2  
-// });
-
-// var heatMap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
-//     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-//     maxZoom: 18,
-//     // id: "mapbox.streets-basic",
-//     id: "mapbox.dark",
-//     accessToken: API_KEY
-//   }).addTo(myMap);
