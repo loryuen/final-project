@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>WORLD DATA</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-md navbar-custom ">
+    <a class="navbar-brand" href="index.html">
+      <a class="nav-link active-nav" href="index.html" style="color: #284269;"><i class="fas fa-home"
+          style="color: #284269"></i><strong>HOME</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="world.html"><strong>WORLD DATA</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="us.html"><strong>US DATA</strong></a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <div class="header">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <h2 style="text-align: center;"><strong> WORLD AIR QUALITY DATA </strong></h2>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12  col-md-12">
+        <div class="title" style="text-align: center;">
+          <!-- <h4><strong>WORLD AIR QUALITY</strong></h4> -->
+          <p align="justify">
+              Restrictions on travel and the closure of businesses and major industries imposed to halt the spread of the coronavirus have resulted in unprecended reductions in air pollution around the world. Analysis of air quality data from the <a href="https://aqicn.org/data-platform/covid19/" target="_blank">World Air Quality Index project</a> has shown reductions in deadly particulate matter (PM 2.5) by 27% from January 2020 to April 2020. The pollutant, known as PM 2.5, is smaller than 2.5 micrometers in diameter and is considered dangerous as it can lodge deep into the lungs and pass into other organs and the bloodstream, causing serious health risks.
+              The World Air Quality Index project tprovides regularly updated air quality data for about 380 major cities in the world from January until present. Analysis of air quality data is from 1 January until 2 May 2020.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="header">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div id="section_one" style="text-align: center;">
+          <h2><strong>AIR QUALITY: BEFORE & AFTER THE COVID-19 PANDEMIC</strong></h2>
+          <div id="section_one">
+              <iframe src="http://0.0.0.0:8000/assets/" width="845px" height="405px" id="heatmap"></iframe>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .section_one-container {
+      height: 500px
+    }
+  </style>
+  <br>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-12 section_one-container">
+        <div id="section_one">
+            <iframe src="http://0.0.0.0:8000/assets/" width="845px" height="405px" id="heatmap"></iframe>
+        </div>
+          </div> -->
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="header">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div style="text-align: center;">
+          <h2><strong>AIR QUALITY OVER TIME: MAJOR WORLD CITIES</strong></h2>
+
+          <div id="section_two">
+              <iframe src="https://wwairchart.herokuapp.com/" width="900px" height="475px"></iframe>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <br>
+      <p align="justify">
+          The above Plotly.py Dash interactive chart deployed as an Heroku app shows January to current data for nine major world cities affected by COVID-19, all implementing varying levels of lockdown. Overall, there was a clear downward trend of PM2.5 levels between January and May. Below shows future forecast of PM2.5 levels for four cities derived from Machine Learning analysis in AWS Forecast. These forecasts indicate that some cities should expect a further decline in PM2.5 levels, while others at the bottom of their decline are starting to rise or remain at current levels.
+      </p>
+
+      <br>
+    </div>
+    <!-- add marianne snapshots here -->
+    <div class="row">
+
+        <div class=“card-group”>
+            <div class=“card”>
+              <img src="assets/img/London.PNG" class=“card-img-top” alt=“London“>
+              <div class=“card-body”>
+                <h5 class=“card-title”> <br> </h5>
+              </div>
+        </div> 
+
+        <div class=“card”>
+            <img src="assets/img/Santiago.PNG" class=“card-img-top” alt=“Santiago“>
+            <div class=“card-body”>
+              <h5 class=“card-title”> <br> </h5>
+            </div>
+        </div>
+
+        <div class=“card”>
+            <img src="assets/img/Florence.PNG" class=“card-img-top” alt=“Florence“>
+            <div class=“card-body”>
+              <h5 class=“card-title”> <br> </h5>
+            </div>
+        </div>
+
+        <div class=“card”>
+            <img src="assets/img/Beijing.PNG" class=“card-img-top” alt=“Beijing“>
+            <div class=“card-body”>
+              <h5 class=“card-title”> <br> </h5>
+            </div>
+        </div>
+      
+    </div>
+    
+  </div>
+  <br>
+  <!-- Jasmine's section -->
+  <div class="header">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div style="text-align: center;">
+          <h2><strong>COVID-19: Positive Cases vs. Deaths</strong></h2>
+
+          <section>
+              <img id="section_two" src="assets/img/globalbubblegraph.PNG" alt="global covid deaths and cases">
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+
+        <p class="main text-main" align="justify">This website displays findings from analysis conducted on global weather data. The data was pulled on January 24, 2020 from over 500 randomly chosen cities across the world through the OpenWeatherMap API. <br/>
+        <br/>
+        After assembling the dataset, various factors of weather were analyzed against the latitude of the cities in order to understand how latitude or location of cities relates to factors including temperature, cloudiness, wind speed and humidity.<br/>
+        
+        <br/>This site provides the source data and visualizations created as part of the analysis as well as explanations and descriptions of trends and correlations observed. </p>
+
+    </div>
+  </div>
+
+
+
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="sec_two_space" style="width:100%; height: 400px;"></div>
+      </div>
+      <br>
+      <hr>
+      <br>
+    </div>
+  </div>
+  <br>
+  <br>
+  <hr>
+  <footer class="footer">
+    <div class="container-fluid text-center">
+      <a href="https://github.com/loryuen/final-project" target="_blank">
+        <i class="fab fa-github fa-2x" style="color: #284269;"></i>
+      </a>
+      <p class="text text-center">
+        <small>© Copyright: Erika Berry - Marianne Burchard - Jasmine Garcia - Kate Minyard - Sree Yallapragada - Lorelle Yuen</br>
+          UNC Chapel Hill© Data Analytics Boot Camp - 2020</small>
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script type="text/javascript" src="/assets/heatmap.js"></script>
+  <script type="text/javascript" src="/assets/config.js"></script>
+  </body>
+
+</html>
